@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=M+PLUS+1+Code:wght@300&family=Oswald&family=Pushster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blue;
+}
+.navbar img {
+    height: 100px;
+    width: 100px;
+}
+main h2{
+    color: black;
+}
+
+
+.jumbotron{
+    background-image: url(img/viaje.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Oswald', sans-serif;
+    height: 300px;
+    margin: 0;
+
+}
+.jumbotron h1{
+    color: white;
+}
+.jumbotron p{
+    color: white;
+    font-size: 20px;
+}
+h2{
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    padding: 15px;
+    background-color: lightskyblue;
+}
+.nleft{
+height: 500px;
+background-color: lightblue;
+}
+.nleft p{
+    padding: 20px;
+    color: white;
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+}
+h3{
+    font-family: 'Oswald', sans-serif;
+}
+.nright{
+height: 500px;
+background-color: lightcyan;
+background-image: url(img/arg-mapa.jpg);
+background-position: center;
+background-size: cover;
+}
+
+.sec{
+    align-items: center;
+    margin:20px;
+
+}
+
+.carousel-indicators li{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    }
+    .carousel-item{
+        text-align: center;
+    }
+    .carousel-item h3{
+        
+        font-family: Arial, Helvetica, sans-serif;
+        color: yellow;
+        font-size: 80px;
+    }
+    .carousel-item p{
+        
+        font-family: Arial, Helvetica, sans-serif;
+        color: yellow;
+        font-size: 40px;
+        
+        
+    }
+    main{
+        background-color: blue;
+    }
+    
+    .contacto2 img{
+        height: 300px;
+        width: 500px;
+        
+    }
+    .contacto1{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .contenedorf{
+        background-color: lightblue;
+        padding: 10px;
+        margin: 5px;
+        align-items: baseline;
+        justify-content: baseline;
+        text-align: justify;
+    }
+
+    .formulario2{
+        align-items: center;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    footer{
+        background-color: lightskyblue;
+        color: white;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
