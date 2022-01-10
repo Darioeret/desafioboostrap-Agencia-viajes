@@ -7,6 +7,7 @@
 
 body{
     background-color: blue;
+    background-image: linear-gradient(to left, lightblue, blue);
 }
 .navbar img {
     height: 100px;
@@ -28,6 +29,7 @@ main h2{
 }
 .jumbotron h1{
     color: white;
+    transform: scale(1);
 }
 .jumbotron p{
     color: white;
@@ -40,7 +42,20 @@ h2{
     font-size: 50px;
     padding: 15px;
     background-color: lightskyblue;
+    
 }
+h2:hover{
+    color: chocolate;
+
+}
+.text-center::selection{
+    color: blue;
+}
+.text-center::first-letter{
+    color: burlywood;
+    font-size: 40px;
+}
+
 .nleft{
 height: 500px;
 background-color: lightblue;
@@ -50,6 +65,13 @@ background-color: lightblue;
     color: white;
     text-align: justify;
     font-family: 'Oswald', sans-serif;
+}
+.nleft p::selection{
+    color: yellow;
+}
+.nleft p::first-letter{
+    color: burlywood;
+    font-size: 25px;
 }
 h3{
     font-family: 'Oswald', sans-serif;
@@ -103,7 +125,61 @@ background-size: cover;
         justify-content: center;
         align-items: center;
         text-align: center;
+        
+        }
+        #cas1{
+            transition: height 0.5s;
+        }
+
+        #cas1:hover{
+            height: 50px;
     }
+    #cas2{
+        transition: height 0.5s;
+    }
+
+    #cas2:hover{
+        height: 50px;
+}
+#cas3{
+    transition: height 0.5s;
+}
+
+#cas3:hover{
+    height: 50px;
+}
+#cas4{
+    transition: height 0.5s;
+}
+
+#cas4:hover{
+    height: 50px;
+}
+#cas5{
+    transition: height 0.5s;
+}
+
+#cas5:hover{
+    height: 50px;
+}
+#cas6{
+    transition: height 0.5s;
+}
+
+#cas6:hover{
+    height: 50px;
+}
+#cas7{
+    transition: height 0.5s;
+}
+
+#cas7:hover{
+    height: 50px;
+}
+    
+    
+
+
     .contenedorf{
         background-color: lightblue;
         padding: 10px;
@@ -123,4 +199,36 @@ background-size: cover;
         color: white;
         text-align: center;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .avion{
+        background-image: url(img/avion.png);
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 190px;
+        animation-name: efecto;
+        animation-iteration-count: 2;
+        animation-timing-function: ease-in;
+        animation-duration: 5s;
+        margin-left: 900px;
+    }
+    @keyframes efecto{
+        0% {
+            opacity: 0;
+        }
+
+        20%{
+            transform: translateX(-100px);
+            opacity: 1;
+        }
+
+        80% {
+            transform: translateX(-600px);
+            opacity: 1;}
+
+        100% {
+            transform: translateX(-9000px);
+            opacity: 0;
+        }
     }
