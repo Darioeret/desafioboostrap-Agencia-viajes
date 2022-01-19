@@ -2,10 +2,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
+  background-image: -webkit-gradient(linear, right top, left top, from(lightblue), to(blue));
   background-image: linear-gradient(to left, lightblue, blue);
 }
 
@@ -32,12 +34,13 @@ main h2 {
   border: solid 2px black;
 }
 
-.jumbotron h1 {
+.jumbotron .tituloPrincipal {
   color: white;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-.jumbotron p {
+.jumbotron .subtituloPrincipal {
   color: white;
   font-size: 20px;
 }
@@ -45,13 +48,17 @@ main h2 {
 h2 {
   color: white;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 50px;
   padding: 15px;
 }
 
 h2:hover {
   color: chocolate;
+}
+
+.text-center::-moz-selection {
+  color: blue;
 }
 
 .text-center::selection {
@@ -73,7 +80,11 @@ h2:hover {
   padding: 20px;
   color: white;
   text-align: justify;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+.nleft p::-moz-selection {
+  color: yellow;
 }
 
 .nleft p::selection {
@@ -86,7 +97,7 @@ h2:hover {
 }
 
 h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .nright {
@@ -99,7 +110,9 @@ h3 {
 }
 
 .sec {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 20px;
   border: solid 2px black;
 }
@@ -136,12 +149,17 @@ main {
 }
 
 .contacto1 {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
 #cas1 {
+  -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -150,6 +168,7 @@ main {
 }
 
 #cas2 {
+  -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -158,6 +177,7 @@ main {
 }
 
 #cas3 {
+  -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -166,6 +186,7 @@ main {
 }
 
 #cas4 {
+  -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -174,6 +195,7 @@ main {
 }
 
 #cas5 {
+  -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -182,6 +204,7 @@ main {
 }
 
 #cas6 {
+  -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -190,6 +213,7 @@ main {
 }
 
 #cas7 {
+  -webkit-transition: height 0.5s;
   transition: height 0.5s;
 }
 
@@ -201,13 +225,19 @@ main {
   background-color: lightblue;
   padding: 10px;
   margin: 5px;
-  align-items: baseline;
-  justify-content: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
   text-align: justify;
 }
 
 .formulario2 {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -216,7 +246,7 @@ footer {
   background-color: linear-gradient(to left, lightblue, blue);
   color: black;
   text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   border: solid 2px black;
 }
 
@@ -227,11 +257,36 @@ footer {
   background-repeat: no-repeat;
   height: 100px;
   width: 190px;
-  animation-name: efecto;
-  animation-iteration-count: 2;
-  animation-timing-function: ease-in;
-  animation-duration: 5s;
+  -webkit-animation-name: efecto;
+          animation-name: efecto;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
   margin-left: 900px;
+}
+
+@-webkit-keyframes efecto {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-9000px);
+            transform: translateX(-9000px);
+    opacity: 0;
+  }
 }
 
 @keyframes efecto {
@@ -239,28 +294,62 @@ footer {
     opacity: 0;
   }
   20% {
-    transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
     opacity: 1;
   }
   80% {
-    transform: translateX(-600px);
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
     opacity: 1;
   }
   100% {
-    transform: translateX(-9000px);
+    -webkit-transform: translateX(-9000px);
+            transform: translateX(-9000px);
     opacity: 0;
   }
 }
-.fcenter {
+
+.borderFooter, .fcenter, .fleft, .fright {
   border: solid 2px black;
 }
 
-.fleft {
-  border: solid 2px black;
+.btn--red1 {
+  background-color: blue;
+  height: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 20px;
+  color: yellow;
+  font-family: georgia;
 }
 
-.fright {
-  border: solid 2px black;
+.btn--red2 {
+  background-color: blue;
+  height: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 20px;
+  color: yellow;
+  font-family: arial;
 }
 
+.btn--red3 {
+  background-color: blue;
+  height: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 20px;
+  color: yellow;
+  font-family: monospace;
+}
 /*# sourceMappingURL=estilos.css.map */
